@@ -1,0 +1,1127 @@
+
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #243047;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 7%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #123c69;
+}
+
+.logo span {
+    color: #f28c45;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.navbar nav a {
+    color: #243047;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #f28c45;
+}
+
+.navbar nav .nav-button {
+    background: #f28c45;
+    color: white;
+    padding: 11px 21px;
+    border-radius: 25px;
+}
+
+.navbar nav .nav-button:hover {
+    background: #d96c28;
+    color: white;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 620px;
+    background:
+        linear-gradient(rgba(7, 28, 50, 0.55),
+        rgba(7, 28, 50, 0.55)),
+        url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800")
+        center/cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-tag {
+    color: #ffd19b;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 6vw, 65px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-content > p:not(.hero-tag) {
+    font-size: 17px;
+    max-width: 580px;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #f28c45;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #d96c28;
+    transform: translateY(-3px);
+}
+
+.secondary-button {
+    border: 2px solid white;
+    color: white;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: #123c69;
+}
+
+/* =========================
+   COMMON SECTION STYLING
+========================= */
+
+.section-padding {
+    padding: 85px 8%;
+}
+
+.section-label {
+    color: #e77d36;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.welcome {
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.welcome h2,
+.featured h2,
+.why-us h2 {
+    font-size: 34px;
+    color: #123c69;
+    margin-bottom: 18px;
+}
+
+.welcome > p:last-child {
+    max-width: 750px;
+    margin: auto;
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* =========================
+   DESTINATION SECTION
+========================= */
+
+.featured {
+    background: #eef4f8;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.view-all {
+    color: #e77d36;
+    font-weight: bold;
+}
+
+.view-all:hover {
+    color: #123c69;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.destination-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
+.destination-card img {
+    display: block;
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 23px;
+}
+
+.card-content h3 {
+    color: #123c69;
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.card-content p {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.card-content span {
+    display: block;
+    color: #e77d36;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.card-content a {
+    display: inline-block;
+    color: #123c69;
+    font-weight: bold;
+}
+
+.card-content a:hover {
+    color: #e77d36;
+}
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-us {
+    text-align: center;
+    background: white;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.feature {
+    padding: 28px 18px;
+    background: #f2f7fb;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    background: #e5eff7;
+    transform: translateY(-5px);
+}
+
+.feature h3 {
+    color: #123c69;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.feature p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.cta {
+    background: linear-gradient(120deg, #123c69, #23658b);
+    text-align: center;
+    color: white;
+    padding: 75px 20px;
+}
+
+.cta h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+    color: #e2e8f0;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #102a43;
+    color: white;
+    text-align: center;
+    padding: 45px 20px 20px;
+}
+
+.footer h2 {
+    color: #f28c45;
+    margin-bottom: 10px;
+}
+
+.footer > p {
+    color: #cbd5e1;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f28c45;
+}
+
+.copyright {
+    border-top: 1px solid #38536c;
+    padding-top: 20px;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 950px) {
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        padding: 15px 4%;
+    }
+
+    .navbar nav {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 17px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .section-padding {
+        padding: 60px 6%;
+    }
+
+    .destination-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .welcome h2,
+    .featured h2,
+    .why-us h2,
+    .cta h2 {
+        font-size: 28px;
+    }
+}
+
+/* DESTINATIONS PAGE */
+
+.destination-banner {
+    min-height: 300px;
+    background: linear-gradient(rgba(10, 38, 65, 0.7), rgba(10, 38, 65, 0.7)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600")
+    center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+}
+
+.destination-banner h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 12px 0;
+}
+
+.destination-banner p:not(.section-label) {
+    color: #f1f5f9;
+}
+
+.destination-search {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.destination-search h2 {
+    color: #123c69;
+    font-size: 30px;
+}
+
+.destination-search > p {
+    color: #64748b;
+    margin: 10px 0 25px;
+}
+
+#destinationSearch {
+    width: min(100%, 550px);
+    padding: 15px 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+}
+
+#destinationSearch:focus {
+    border-color: #f28c45;
+    box-shadow: 0 0 0 3px rgba(242, 140, 69, 0.15);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.filter-btn {
+    border: 1px solid #d5dee8;
+    background: white;
+    color: #123c69;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #123c69;
+    color: white;
+    border-color: #123c69;
+}
+
+.destination-list {
+    padding-top: 20px;
+}
+
+@media (max-width: 650px) {
+    .destination-banner {
+        min-height: 250px;
+    }
+
+    .destination-search h2 {
+        font-size: 25px;
+    }
+}
+
+/* PACKAGES PAGE */
+
+.package-info {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.package-info p {
+    margin-bottom: 10px;
+}
+
+.package-info .price {
+    color: #e77d36;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* INDIVIDUAL COUNTRY PAGES */
+
+.country-heading {
+    text-align: center;
+    padding: 55px 20px 35px;
+    background: #eef4f8;
+}
+
+.country-heading h1 {
+    color: #123c69;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.country-heading > p:last-child {
+    color: #64748b;
+}
+
+.country-image-section {
+    width: 100%;
+    padding: 20px 7%;
+    background: #eef4f8;
+}
+
+.country-main-image {
+    display: block;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.country-content {
+    background: white;
+}
+
+.country-intro {
+    max-width: 850px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.country-intro h2,
+.attractions-section h2,
+.country-budget h2 {
+    color: #123c69;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.country-intro p:last-child {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.country-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 65px;
+}
+
+.fact-card {
+    background: #f2f7fb;
+    text-align: center;
+    padding: 25px 12px;
+    border-radius: 14px;
+}
+
+.fact-card h3 {
+    color: #123c69;
+    margin-bottom: 10px;
+}
+
+.fact-card p {
+    color: #64748b;
+}
+
+.attractions-section {
+    text-align: center;
+}
+
+.attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.attraction-card {
+    background: #f2f7fb;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.attraction-card:hover {
+    transform: translateY(-6px);
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.attraction-card h3 {
+    color: #123c69;
+    padding: 15px 15px 5px;
+}
+
+.attraction-card p {
+    color: #64748b;
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+.country-budget {
+    text-align: center;
+    background: #eef4f8;
+    border-radius: 18px;
+    padding: 45px 20px;
+    margin-top: 65px;
+}
+
+.country-budget > p {
+    margin: 10px 0;
+    color: #64748b;
+}
+
+.country-budget .country-price {
+    color: #e77d36;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 8px;
+}
+
+.country-budget .budget-note {
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 700px) {
+    .country-heading h1 {
+        font-size: 31px;
+    }
+
+    .country-main-image {
+        height: 260px;
+    }
+
+    .country-facts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .attraction-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* BOOKING PAGE DESIGN */
+
+body {
+    background-color: #f0f5f9;
+}
+
+/* Booking page heading */
+
+.page-hero {
+    background: linear-gradient(135deg, #123c69, #2a8c9d);
+    color: white;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.page-hero h1 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.page-hero p {
+    font-size: 17px;
+}
+
+/* Booking section background */
+
+.booking-section {
+    max-width: 750px;
+    margin: 45px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* Arrange all form fields vertically */
+
+#bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Form labels */
+
+#bookingForm label {
+    display: block;
+    font-weight: bold;
+    color: #183b56;
+    margin-top: 8px;
+}
+
+/* Input fields and dropdown */
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f8fafc;
+    outline: none;
+}
+
+/* Focus effect */
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+    border-color: #258c9d;
+    background-color: white;
+}
+
+/* Additional requirements box */
+
+#bookingForm textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Submit button */
+
+.form-submit {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #176b87;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background: #104b68;
+}
+
+/* Booking result */
+
+.booking-result {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #eaf6f7;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+
+
+@media (max-width: 600px) {
+    .booking-section {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+
+    .page-hero h1 {
+        font-size: 27px;
+    }
+}
+
+/* COMPLETE BOOKING PAGE FIX */
+
+body {
+    background-color: #eef4f8 !important;
+}
+
+.page-hero {
+    background: linear-gradient(135deg, #123c69, #258c9d) !important;
+    color: white !important;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.booking-section {
+    display: block !important;
+    max-width: 700px;
+    margin: 40px auto !important;
+    padding: 35px !important;
+    background-color: white !important;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+#bookingForm {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    width: 100%;
+}
+
+#bookingForm label {
+    display: block !important;
+    width: 100%;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #183b56;
+}
+
+#bookingForm input,
+#bookingForm select,
+#bookingForm textarea {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #f8fafc;
+    font-size: 15px;
+}
+
+#bookingForm textarea {
+    min-height: 110px;
+}
+
+#bookingForm .form-submit {
+    width: 100% !important;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #176b87;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.booking-result {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #eaf6f7;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .booking-section {
+        margin: 20px 12px !important;
+        padding: 20px !important;
+    }
+}
+
+
+/* FINAL TRIP SUMMARY PAGE DESIGN */
+
+/* Background only on Trip Summary page */
+body:has(.summary-section) {
+    background: linear-gradient(135deg, #dceef2, #e8e2f5) !important;
+    min-height: 100vh;
+}
+
+/* Center the white summary card */
+main .summary-section {
+    display: block !important;
+    width: 92% !important;
+    max-width: 750px !important;
+    margin: 55px auto !important;
+    padding: 40px !important;
+    box-sizing: border-box;
+    background-color: #ffffff !important;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Thank you heading */
+.summary-section h2 {
+    text-align: center;
+    color: #174b70;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+/* Welcome paragraph */
+.summary-section > p {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Trip details box */
+.summary-section #tripSummary {
+    display: block;
+    background-color: #f1f7fb;
+    padding: 22px;
+    border-radius: 12px;
+    line-height: 2;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+/* Individual details */
+#tripSummary p {
+    margin: 8px 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #dce7ef;
+}
+
+/* Summary buttons */
+.summary-section a.btn {
+    display: inline-block;
+    margin: 10px 8px 0 0;
+    padding: 13px 20px;
+    background-color: #176b87;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.summary-section a.btn:hover {
+    background-color: #104b68;
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+    main .summary-section {
+        width: 94% !important;
+        margin: 25px auto !important;
+        padding: 22px !important;
+    }
+
+    .summary-section a.btn {
+        display: block;
+        margin: 12px 0;
+    }
+}
+
+/* ABOUT US PAGE DESIGN */
+
+/* Background only for About Us page */
+body:has(.about-section) {
+    background: linear-gradient(135deg, #dceef2, #e8e6f8);
+    min-height: 100vh;
+}
+
+/* About page heading */
+body:has(.about-section) .page-hero {
+    background: linear-gradient(135deg, #123c69, #258c9d);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+body:has(.about-section) .page-hero h1 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* Center About Us content */
+.about-section {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto !important;
+    padding: 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+/* Questions */
+.about-section h2 {
+    color: #176b87;
+    font-size: 25px;
+    margin: 25px 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e1edf3;
+}
+
+/* Answers */
+.about-section p {
+    color: #526477;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* Why choose us list */
+.about-section ul {
+    display: inline-block;
+    text-align: left;
+    margin: 10px auto 25px;
+    padding-left: 25px;
+    color: #526477;
+    line-height: 2.2;
+}
+
+/* Explore button */
+.about-section .btn {
+    display: table;
+    margin: 30px auto 0;
+    background: #176b87;
+    color: white;
+    padding: 14px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.about-section .btn:hover {
+    background: #104b68;
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+    .about-section {
+        width: 92%;
+        padding: 22px;
+        margin: 25px auto !important;
+    }
+
+    body:has(.about-section) .page-hero h1 {
+        font-size: 28px;
+    }
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+/* Show the complete Eiffel Tower image */
+.paris-page .country-main-image {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}

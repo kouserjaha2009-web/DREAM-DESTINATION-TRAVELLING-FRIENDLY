@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Destinations | Dream Destination</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">Dream<span>Destination</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="about.html">About</a>
+            <a href="booking.html" class="nav-button">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="destination-banner">
+        <div>
+            <p class="section-label">DISCOVER THE WORLD</p>
+            <h1>Explore Amazing Destinations</h1>
+            <p>Find your favourite place and start planning your next adventure.</p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="destination-search section-padding">
+
+        <h2>Where Would You Like to Go?</h2>
+        <p>Search for your dream destination below.</p>
+
+        <input
+            type="text"
+            id="destinationSearch"
+            placeholder="Search Bali, Paris, Tokyo..."
+            aria-label="Search destinations"
+        >
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Places</button>
+            <button class="filter-btn" data-filter="beach">Beaches</button>
+            <button class="filter-btn" data-filter="mountain">Mountains</button>
+            <button class="filter-btn" data-filter="city">Cities</button>
+        </div>
+
+    </section>
+
+    <!-- Destination Cards -->
+    <section class="destination-list section-padding">
+
+        <div class="destination-grid">
+
+            <div class="destination-card" data-category="beach" data-name="bali indonesia">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=900" alt="Bali">
+                <div class="card-content">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Beautiful beaches, tropical forests and peaceful temples.</p>
+                    <span>Starting from ₹45,000</span>
+                    <a href="destination-bali.html">Explore Bali →</a>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="mountain" data-name="switzerland">
+                <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900" alt="Switzerland">
+                <div class="card-content">
+                    <h3>Switzerland</h3>
+                    <p>Explore snowy mountains, beautiful lakes and villages.</p>
+                    <span>Starting from ₹1,20,000</span>
+                    <a href="destination-switzerland.html">Explore Switzerland →</a>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="beach" data-name="maldives">
+                <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900" alt="Maldives">
+                <div class="card-content">
+                    <h3>Maldives</h3>
+                    <p>Enjoy blue oceans, island views and relaxing beaches.</p>
+                    <span>Starting from ₹65,000</span>
+                    <a href="destination-maldives.html">Explore Maldives →</a>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="city" data-name="paris france">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=900" alt="Paris">
+                <div class="card-content">
+                    <h3>Paris, France</h3>
+                    <p>Discover famous landmarks, art and French culture.</p>
+                    <span>Starting from ₹95,000</span>
+                    <a href="destination-paris.html">Explore Paris →</a>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="city" data-name="tokyo japan">
+                <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=900" alt="Tokyo">
+                <div class="card-content">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Experience modern technology and traditional culture.</p>
+                    <span>Starting from ₹75,000</span>
+                    <a href="destination-tokyo.html">Explore Tokyo →</a>
+                </div>
+            </div>
+
+            <div class="destination-card" data-category="city" data-name="south korea seoul">
+                <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?w=900" alt="South Korea">
+                <div class="card-content">
+                    <h3>South Korea</h3>
+                    <p>Explore Seoul, Korean food, culture and beautiful places.</p>
+                    <span>Starting from ₹85,000</span>
+                    <a href="destination-korea.html">Explore South Korea →</a>
+                </div>
+            </div>
+
+        </div>
+
+        <p id="noResults" style="display:none; text-align:center; margin-top:30px;">
+            No destinations found. Try another search.
+        </p>
+
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <h2>Your Dream Trip Is Waiting!</h2>
+        <p>Choose your favourite destination and plan your journey today.</p>
+        <a href="booking.html" class="primary-button">Book Your Trip</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>Dream Destination</h2>
+        <p>Discover the world, one journey at a time.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="about.html">About</a>
+            <a href="booking.html">Booking</a>
+        </div>
+
+        <p class="copyright">© 2026 Dream Destination. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
